@@ -3,11 +3,17 @@ package com.zemoso.assignment.java;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class Problem3 {
     public static void main(String[] args) {
-        List<Integer> times = pingHost("google.com");
+        Scanner scanner = new Scanner(System.in);
+        String ip = scanner.next();
+        scanner.close();
+        List<Integer> times = pingHost(ip);
+        Collections.sort(times);
         System.out.println(getMedian(times, times.size()));
     }
 

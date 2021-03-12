@@ -2,6 +2,7 @@ package com.zemoso.assignment.java;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,6 +16,7 @@ public class Problem1 {
         String directoryName = "C:\\Users\\Devendar Reddy\\Downloads\\test";
         Scanner scanner = new Scanner(System.in);
         String pattern = scanner.next();
+        scanner.close();
         listFiles(new File(directoryName), pattern).forEach(System.out::println);
 
     }
